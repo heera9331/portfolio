@@ -56,16 +56,17 @@ a {
 
 #home {
     max-width: 90%;
-    margin: 1rem auto;
+    margin: auto;
     display: flex;
     align-items: center;
+    padding: 5rem 0;
 }
 
 #home .content {
     display: flex;
 }
 
-.content {
+#home .content {
     margin: 4rem auto;
     font-size: larger;
 }
@@ -97,6 +98,7 @@ a {
 }
 
 #about {
+    padding-top: 5rem;
     max-width: 90%;
     margin: 1rem auto;
     display: flex;
@@ -113,24 +115,52 @@ a {
     justify-content: space-around;
 }
 
-#about .info ul li {
-    list-style-type: none;
-    padding: 10px 5px;
+#about .skills-wrapper {
+    display: flex;
+    flex-direction: column;
 }
 
+
+#about .skills-wrapper .skill-level {
+    padding: 10px;
+}
+
+#about .skills-wrapper .skill-level div.skill-name {
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+
+
+#about .content {
+
+    margin: 4rem auto;
+    font-size: larger;
+}
+
+
+#about .info .bio-data .bio-data li {
+    margin: 10px;
+}
+
+#about .info .contect .wrapper li {
+    margin: 10px;
+}
 
 #academics h2 {
     margin: 1rem auto;
 }
 
-#education .edu-desc {
-    margin-top: 1rem;
-}
 
 #education {
     background-color: var(--secondary-color);
     padding: 1.5rem;
     border-radius: 5px;
+}
+
+#education .edu-desc {
+    margin-top: 1rem;
 }
 
 #education .graduation {
@@ -159,34 +189,27 @@ a {
 }
 
 #services {
+    padding: 6rem 0;
     max-width: 90%;
     margin: auto;
 }
 
+
 #services .services-wrapper {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
-    justify-content: space-between;
-    margin: 2rem auto; 
+    margin: 2rem auto;
 }
 
 #services .services-wrapper .service-container {
     background-color: var(--secondary-color);
-    /* text-align: center;
-    width: 11rem;
-    padding: 4rem;
-    margin-top: 2rem; */
-
     border-radius: .5rem;
-    /* margin: .5rem; */
-    width: 287px;
+    /* width: 287px; */
     text-align: center;
     padding: 1rem;
+    /* margin: 1rem; */
 }
-
 
 
 #services .services-wrapper span.material-symbols-outlined {
@@ -199,8 +222,8 @@ a {
 
 #portfolio {
     max-width: 90%;
-    /* display: flex; */
     margin: 1rem auto;
+    padding: 6rem 0;
 }
 
 #portfolio .projects {
@@ -208,16 +231,160 @@ a {
 }
 
 #portfolio .project-wrapper {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin: 2rem auto; 
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin: 2rem auto;
 }
 
 #portfolio .project-wrapper .project-container {
     background-color: var(--main-color);
     border-radius: 1rem;
     margin: .5rem;
+    /* padding: 5px; */
+    box-shadow: rgba(255, 255, 255, 0.24) 0px 3px 8px;
+}
 
+#portfolio .project-wrapper .project-container img {
+    width: 100%;
+    border-radius: 1rem;
+}
+
+#contact {
+    max-width: 90%;
+    margin: 1rem auto;
+    padding: 10rem 0;
+}
+
+#contact .query {
+    text-align: center;
+    height: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    line-height: 3rem;
+}
+
+#contact .query p {
+    font-weight: bold;
+}
+
+#contact .contacts-wrapper {
+    display: flex;
+    justify-content: space-around;
+    margin: 3rem auto;
+    align-items: center;
+}
+
+#contact .contacts-wrapper .contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 2.5rem;
+    font-weight: bold;
+    /* font-size: 1.5rem; */
+}
+
+#contact .query h2 {
+    font-size: 2.8rem;
+    color: var(--main-color);
+}
+
+#contact .query p {
+    font-size: 1.8rem;
+}
+
+
+#contact .contacts-wrapper .contact span {
+    color: var(--main-color);
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+#contact .mail-contact .nameAndMail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#contact .mail-contact .nameAndMail input,
+textarea {
+    padding: 15px;
+    width: 50%;
+    border-radius: 15px;
+    border: none;
+    margin: 10px;
+    background-color: var(--secondary-color);
+
+}
+
+#contact .mail-contact .nameAndMail,
+textarea {
+    justify-content: start;
+}
+
+
+#contact .mail-contact .nameAndMail input,
+textarea {
+    width: 100%;
+}
+
+#contact .btn {
+    margin-left: 10px;
+    border-radius: 1.4rem;
+}
+
+#navbar .menu-btn {
+    display: none;
+}
+
+/* responsive */
+
+.toggle {
+    background-color: red;
+    padding: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+    #services .services-wrapper {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    #portfolio .project-wrapper {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    #navbar .menu {
+        display: none;
+    }
+
+    #navbar .menu-btn {
+        display: block;
+    }
+
+}
+
+@media screen and (max-width: 426px) {
+    #home .content {
+        display: block;
+    }
+
+    #about {
+        display: block;
+    }
+    #about .info {
+        display: block;
+    }
+
+    #services .services-wrapper {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    #contact .contacts-wrapper {
+        display: block; 
+    }
+
+    #contact .contacts-wrapper .contact {
+        margin-top: 2rem;
+    }
 }
