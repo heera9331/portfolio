@@ -12,70 +12,72 @@
 </head>
 
 <body>
-
-
-
     <div id="navbar">
         <div class="brand">
             <h1>Heera Singh Lodhi</h1>
         </div>
-        <div class="menu-btn" onclick="addMenu(this)" id="">
+        <div class="menu-btn" onclick="toggleMenu()">
             <button>
-                <span class="material-symbols-outlined">
-                    menu
-                </span>
-            </button> 
+                <span class="material-symbols-outlined">menu</span>
+            </button>
         </div>
-        <div class="menu"> 
+        <div class="menu">
             <div class="link-wrapper">
                 <div class="link-container">
-                    <span class="material-symbols-outlined">
-                        home
-                    </span>
+                    <span class="material-symbols-outlined">home</span>
                     <a href="#home" class="centered-text">Home</a>
                 </div>
             </div>
-
             <div class="link-wrapper">
                 <div class="link-container">
-                    <span class="material-symbols-outlined">
-                        account_circle
-                    </span>
+                    <span class="material-symbols-outlined">account_circle</span>
                     <a class="centered-text" href="#about">About</a>
                 </div>
             </div>
-
             <div class="link-wrapper">
                 <div class="link-container">
-                    <span class="material-symbols-outlined">
-                        support_agent
-                    </span>
+                    <span class="material-symbols-outlined">support_agent</span>
                     <a class="centered-text" href="#services">Services</a>
                 </div>
             </div>
-
-
             <div class="link-wrapper">
                 <div class="link-container">
-                    <span class="material-symbols-outlined">
-                        desktop_windows
-                    </span>
+                    <span class="material-symbols-outlined">desktop_windows</span>
                     <a class="centered-text" href="#portfolio">Portfolio</a>
                 </div>
             </div>
-
             <div class="link-wrapper">
                 <div class="link-container">
-                    <span class="material-symbols-outlined">
-                        contacts
-                    </span>
+                    <span class="material-symbols-outlined">contacts</span>
                     <a class="centered-text" href="#contact">Contact</a>
                 </div>
             </div>
-
         </div>
-
     </div>
+
+    <style>
+        .menu {
+            display: none;
+            /* Initially hide the menu */
+        }
+
+        .show-menu .menu {
+            display: block;
+            /* Show the menu when the "show-menu" class is applied */
+        }
+    </style>
+
+    <script>
+        function toggleMenu() {
+            var menuBtn = document.querySelector('.menu-btn');
+            var navbar = document.querySelector('#navbar');
+
+            menuBtn.classList.toggle('show-menu');
+            navbar.classList.toggle('show-menu');
+            console.log('changed');
+        }
+    </script>
+
 
 
 
@@ -379,7 +381,7 @@
         </div>
 
         <div class="query">
-            <h2>Send Me An Mail</h2>
+            <h2>Send Me An Email</h2>
             <p>I'M VERY RESPONSIVE TO MESSAGES</p>
         </div>
 
@@ -399,7 +401,7 @@
             </div>
 
             <button class="btn">
-                Send Message
+                <a href="mailto:heera9331@example.com?subject=Hello">Send Message</a>
             </button>
         </div>
     </div>

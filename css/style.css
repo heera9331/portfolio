@@ -2,6 +2,7 @@
     --primary-color: #000814;
     --secondary-color: #111d28;
     --main-color: #ff7606;
+    /* --main-color: #ff06b0; */
 }
 
 * {
@@ -362,8 +363,22 @@ textarea {
     #navbar .menu-btn {
         display: block;
     }
+}
+
+/* responsive */
+
+.menu {
+    display: none;
+    /* Initially hide the menu */
+}
+
+.show-menu .menu {
+    display: block;
+    /* Show the menu when the "show-menu" class is applied */
+
 
 }
+
 
 @media screen and (max-width: 426px) {
     #home .content {
@@ -373,8 +388,10 @@ textarea {
     #about {
         display: block;
     }
+
     #about .info {
         display: block;
+        z-index: 10;
     }
 
     #services .services-wrapper {
@@ -382,7 +399,7 @@ textarea {
     }
 
     #contact .contacts-wrapper {
-        display: block; 
+        display: block;
     }
 
     #contact .contacts-wrapper .contact {

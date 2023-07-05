@@ -1,7 +1,8 @@
+function toggleMenu() {
+    var menuBtn = document.querySelector('.menu-btn');
+    var navbar = document.querySelector('#navbar');
 
-let isClicked = false;
-
-const addMenu = (e) => {
-     
+    menuBtn.classList.toggle('show-menu');
+    navbar.classList.toggle('show-menu');
+    console.log('changed');
 }
-
