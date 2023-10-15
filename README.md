@@ -1,4 +1,6 @@
-# portfolio
+# Portfolio
+
+![](https://komarev.com/ghpvc/?username=heera9331&color=brightgreen)
 
 visit - https://heera-singh.netlify.app/
 
