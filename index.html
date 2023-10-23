@@ -16,12 +16,10 @@
         <div class="brand">
             <h1>Heera Singh Lodhi</h1>
         </div>
-        <div class="menu-btn" onclick="toggleMenu()">
-            <button>
-                <span class="material-symbols-outlined">menu</span>
-            </button>
+        <div class="menu-btn" id="menu-btn">
+            <span class="material-symbols-outlined">menu</span> 
         </div>
-        <div class="menu">
+        <div class="menu" id="menu">
             <div class="link-wrapper">
                 <div class="link-container">
                     <span class="material-symbols-outlined">home</span>
@@ -54,32 +52,7 @@
             </div>
         </div>
     </div>
-
-    <style>
-        .menu {
-            display: none;
-            /* Initially hide the menu */
-        }
-
-        .show-menu .menu {
-            display: block;
-            /* Show the menu when the "show-menu" class is applied */
-        }
-    </style>
-
-    <script>
-        function toggleMenu() {
-            var menuBtn = document.querySelector('.menu-btn');
-            var navbar = document.querySelector('#navbar');
-
-            menuBtn.classList.toggle('show-menu');
-            navbar.classList.toggle('show-menu');
-            console.log('changed');
-        }
-    </script>
-
-
-
+ 
 
     <div id="home">
         <div class="content">
@@ -101,7 +74,7 @@
             </div>
 
             <div class="subject">
-                <img src="images/heera3.png" alt="">
+                <img src="./media/images/heera3.png" alt="">
             </div>
         </div>
     </div>
@@ -306,19 +279,23 @@
 
                 <div class="project-wrapper">
                     <div class="project-container">
-                        <img src="images/port.png" alt="">
+                        <img src="./media/images/port.png" alt="">
                     </div>
 
                     <div class="project-container">
-                        <img src="images/quizjs.png" alt="">
+                        <img src="./media/images/litc.png" alt="">
                     </div>
 
                     <div class="project-container">
-                        <img src="images/vidyalay.png" alt="">
+                        <img src="./media/images/quizjs.png" alt="">
                     </div>
 
                     <div class="project-container">
-                        <img src="images/vidyalay1.png" alt="">
+                        <img src="./media/images/vidyalay.png" alt="">
+                    </div>
+
+                    <div class="project-container">
+                        <img src="./media/images/vidyalay1.png" alt="">
                     </div>
 
 
@@ -404,6 +381,11 @@
                 <a href="mailto:heera9331@example.com?subject=Hello">Send Message</a>
             </button>
         </div>
+    </div>
+
+    <div class="footer">
+        <p>@2023 Heera's Portfolio</p>
+    </div>
     </div>
 
 
