@@ -1,8 +1,7 @@
 :root {
   --primary-color: #000814;
   --secondary-color: #111d28;
-  --main-color: #ff7606;
-  /* --main-color: #ff06b0; */
+  --main-color: #ff7606; 
 }
 
  
@@ -333,6 +332,7 @@ textarea {
   display: flex;
   align-items: center;
   justify-content: center;
+  border-top: 3px solid var(--main-color);
 }
 
 .footer p {
