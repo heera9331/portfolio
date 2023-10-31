@@ -57,6 +57,11 @@ a {
   padding: 3px;
 }
 
+div.link-wrapper:hover, a#nav-link:hover {
+  color: var(--main-color);
+}
+
+
 #home {
   max-width: 90%;
   margin: auto;
