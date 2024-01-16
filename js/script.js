@@ -9,11 +9,11 @@ trigger.addEventListener("click", () => {
   menu.classList.toggle("show-menu");
   if (flag == 0) {
     menu.classList.remove("menu");
-    trigger.innerHTML = `<span class="material-symbols-outlined">menu</span> `;
+    trigger.innerHTML = `<span class="material-symbols-outlined">close</span> `;
 
     flag = 1;
   } else {
-    trigger.innerHTML = `<span class="material-symbols-outlined">close</span> `;
+    trigger.innerHTML = `<span class="material-symbols-outlined">menu</span> `;
     menu.classList.add("menu");
     flag = 0;
   }

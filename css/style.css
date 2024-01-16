@@ -1,10 +1,12 @@
 :root {
   --primary-color: #000814;
   --secondary-color: #111d28;
-  --main-color: #ff7606; 
+  --main-color: #ff7606;
 }
 
- 
+html {
+  scroll-behavior: smooth;
+}
 
 * {
   padding: 0;
@@ -29,27 +31,44 @@ a:active {
 }
 
 #navbar {
-  padding: 1.5rem;
+  padding: 1rem 4rem;
   background-color: var(--secondary-color);
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   position: sticky;
   top: 0;
+  /* background-color: red; */
 }
 
 #navbar .menu {
   display: flex;
   align-items: center;
   text-align: center;
+  gap: 1rem;
+  /* background-color: red; */
 }
 
 #navbar .link-wrapper {
-  margin: 0.5rem 1rem;
+  padding: 5px;
+  /* background-color: red; */
+}
+.link-container a {
+  color: inherit;
+  font-size: large;
 }
 
-#navbar .link-container {
+.link-container:hover {
+  color: var(--main-color);
+}
+.link-wrapper:hover {
+  background-color: var(--primary-color);
+  border-bottom: 2px solid var(--main-color);
+}
+.link-container {
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #navbar .link-container span,
@@ -57,10 +76,10 @@ a {
   padding: 3px;
 }
 
-div.link-wrapper:hover, a#nav-link:hover {
+/* div.link-wrapper:hover,
+a#nav-link:hover {
   color: var(--main-color);
-}
-
+} */
 
 #home {
   max-width: 90%;
@@ -85,18 +104,29 @@ div.link-wrapper:hover, a#nav-link:hover {
 }
 
 .btn {
-  margin: 1rem auto;
-  margin-right: 3rem;
-  padding: 12px 36px;
+  padding: 8px 10px;
   font-weight: bold;
   border: none;
   border-radius: 5px;
   background-color: var(--main-color);
   color: white;
+  font-size: large;
+}
+
+.btn:hover {
+  cursor: pointer;
+  opacity: 0.8;
 }
 
 #home .homeContent p {
   margin: 1rem auto;
+}
+
+#home .subject {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
 }
 
 #home .subject img {
@@ -104,6 +134,7 @@ div.link-wrapper:hover, a#nav-link:hover {
   padding: 3px;
   border-radius: 4px;
   width: 100%;
+  /* background-color: red; */
 }
 
 #about {
@@ -127,15 +158,15 @@ div.link-wrapper:hover, a#nav-link:hover {
 #about .skills-wrapper {
   display: flex;
   flex-direction: column;
-}
-
-#about .skills-wrapper .skill-level {
-  padding: 10px;
+  justify-content: center;
+  gap: 0.5rem;
 }
 
 #about .skills-wrapper .skill-level div.skill-name {
   background-color: var(--secondary-color);
-  border-radius: 10px;
+  /* background-color: red; */
+  display: flex;
+  border-radius: 0.3rem;
   padding: 10px;
 }
 
@@ -145,11 +176,20 @@ div.link-wrapper:hover, a#nav-link:hover {
 }
 
 #about .info .bio-data .bio-data li {
-  margin: 10px;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  list-style-type: square;
 }
 
 #about .info .contect .wrapper li {
-  margin: 10px;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  list-style-type: square;
+}
+
+div.content,
+div.bio-data {
+  height: fit-content;
 }
 
 #academics h2 {
@@ -157,8 +197,7 @@ div.link-wrapper:hover, a#nav-link:hover {
 }
 
 #education {
-  background-color: var(--secondary-color);
-  padding: 1.5rem;
+  /* padding: 1.5rem; */
   border-radius: 5px;
 }
 
@@ -169,21 +208,24 @@ div.link-wrapper:hover, a#nav-link:hover {
 #education .graduation {
   padding-left: 4px;
   border-left: 3px solid var(--main-color);
-  padding-left: 1rem;
+  padding: 1rem;
+  background-color: var(--secondary-color);
 }
 
 #education .intermediate {
   margin-top: 3rem;
   padding-left: 4px;
   border-left: 3px solid var(--main-color);
-  padding-left: 1rem;
+  padding: 1rem;
+  background-color: var(--secondary-color);
 }
 
 #education .high-school {
   margin-top: 3rem;
   padding-left: 4px;
   border-left: 3px solid var(--main-color);
-  padding-left: 1rem;
+  padding: 1rem;
+  background-color: var(--secondary-color);
 }
 
 #education .high-school {
@@ -205,17 +247,31 @@ div.link-wrapper:hover, a#nav-link:hover {
 
 #services .services-wrapper .service-container {
   background-color: var(--secondary-color);
-  border-radius: 0.5rem;
   /* width: 287px; */
   text-align: center;
   padding: 1rem;
+
   /* margin: 1rem; */
+  /* background-color: red; */
+  border-radius: 3px;
+}
+
+.service-container:hover {
+  scale: 1.1;
+  transition: all ease-in 200ms;
+  transition: all ease-out 200ms;
+  border: 1px solid var(--main-color);
 }
 
 #services .services-wrapper span.material-symbols-outlined {
   color: var(--main-color);
   font-size: 3rem;
   padding: 5px;
+}
+
+.services-wrapper p {
+  text-align: left;
+  padding: 1rem 0;
 }
 
 #portfolio {
@@ -236,16 +292,22 @@ div.link-wrapper:hover, a#nav-link:hover {
 }
 
 #portfolio .project-wrapper .project-container {
-  background-color: var(--main-color);
-  border-radius: 1rem;
-  margin: 0.5rem;
+  /* background-color: var(--main-color); */
+  border-radius: 5px;
+
   /* padding: 5px; */
-  box-shadow: rgba(255, 255, 255, 0.24) 0px 3px 8px;
+}
+
+.project-container:hover {
+  box-shadow: var(--main-color) 3px 3px 10px;
+  transition: all ease-in 200ms;
+  margin: 0 1rem;
+  scale: 1.1;
 }
 
 #portfolio .project-wrapper .project-container img {
   width: 100%;
-  border-radius: 1rem;
+  border-radius: 0.5rem;
 }
 
 #contact {
@@ -308,7 +370,7 @@ div.link-wrapper:hover, a#nav-link:hover {
 textarea {
   padding: 15px;
   width: 50%;
-  border-radius: 15px;
+  border-radius: 0.3rem;
   border: none;
   margin: 10px;
   background-color: var(--secondary-color);
@@ -326,7 +388,14 @@ textarea {
 
 #contact .btn {
   margin-left: 10px;
-  border-radius: 1.4rem;
+  border-radius: 0.2rem;
+}
+
+input:focus,
+textarea:focus {
+  outline-color: var(--main-color);
+  color: white;
+  font-size: medium;
 }
 
 /* responsive */
@@ -349,11 +418,18 @@ textarea {
   display: none;
 }
 
-
-
 /* responsive navbar */
 
 @media screen and (max-width: 750px) {
+  #home .subject img {
+  }
+  #home .content {
+    display: block;
+  }
+  #navbar {
+    /* background-color: red; */
+    padding: 1rem 2rem;
+  }
   #services .services-wrapper {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -371,8 +447,9 @@ textarea {
 }
 
 @media screen and (max-width: 500px) {
-  #home .content {
-    display: block;
+  #navbar {
+    /* background-color: red; */
+    padding: 1rem;
   }
 
   #about {
@@ -395,13 +472,23 @@ textarea {
   #contact .contacts-wrapper .contact {
     margin-top: 2rem;
   }
+
+  #contact .query p,
+  #contact .query h2 {
+    padding: 1rem 0;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .mail-contact {
+    margin-top: 2rem;
+  }
 }
 
 .show-menu {
   display: flex;
-  background-color: red;
   position: absolute;
-  top: 90px;
+  top: 78px;
   right: 0;
   width: 40%;
   height: 100vh;
@@ -410,6 +497,5 @@ textarea {
   align-items: center;
   /* z-index: 1; */
   background-color: var(--secondary-color);
+  /* background-color: red; */
 }
-
- 
