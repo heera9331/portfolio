@@ -104,10 +104,10 @@ a#nav-link:hover {
 }
 
 .btn {
-  padding: 8px 10px;
+  padding: 6px 8px;
   font-weight: bold;
   border: none;
-  border-radius: 5px;
+  border-radius: 2px;
   background-color: var(--main-color);
   color: white;
   font-size: large;
@@ -151,8 +151,8 @@ a#nav-link:hover {
 
 #about .info {
   margin: 2rem auto;
-  display: flex;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 #about .skills-wrapper {
@@ -282,6 +282,32 @@ div.bio-data {
 
 #portfolio .projects {
   margin: 1.4rem 0 0.8rem 0;
+}
+
+.ccs {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 1rem auto;
+}
+
+.ccsImages {
+  margin: 1rem auto;
+  gap: 1rem;
+  width: 100%;
+  overflow-wrap: normal;
+  display: flex;
+  overflow-x: scroll;
+  transition: all ease-in 300ms;
+}
+
+#ccsImage {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.fade {
+  animation: fadeInOut 3s ease-in-out infinite; /* Change the duration and animation type as needed */
 }
 
 #portfolio .project-wrapper {
@@ -421,7 +447,21 @@ textarea:focus {
 /* responsive navbar */
 
 @media screen and (max-width: 750px) {
-  #home .subject img {
+  #about .info {
+    margin: 2rem auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  #about .info .bio-data .bio-data li {
+    margin: 0.5rem;
+    padding: 0.5rem;
+    list-style-type: none;
+  }
+
+  /* #home .subject img {
+  } */
+  .info {
+    grid-template-columns: repeat(2, 1fr);
   }
   #home .content {
     display: block;
@@ -477,6 +517,9 @@ textarea:focus {
   #contact .query h2 {
     padding: 1rem 0;
   }
+  .bio-data .contact {
+    background-color: red;
+  }
 }
 
 @media screen and (max-width: 450px) {
@@ -488,13 +531,15 @@ textarea:focus {
 .show-menu {
   display: flex;
   position: absolute;
-  top: 78px;
+  top: 76px;
   right: 0;
   width: 40%;
   height: 100vh;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: start;
+  align-items: start;
+  padding-left: 1rem;
+  padding-top: 1rem;
   /* z-index: 1; */
   background-color: var(--secondary-color);
   /* background-color: red; */

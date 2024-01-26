@@ -43,7 +43,7 @@
             <div class="link-wrapper">
                 <div class="link-container">
                     <span class="material-symbols-outlined">desktop_windows</span>
-                    <a class="centered-text" href="#portfolio" id="nav-link">Portfolio</a>
+                    <a class="centered-text" href="#portfolio" id="nav-link">Projects</a>
                 </div>
             </div>
             <div class="link-wrapper">
@@ -121,9 +121,7 @@
                 </div>
 
                 <div class="skill">
-                    <div class="skills-wrapper">
-
-
+                    <div class="skills-wrapper"> 
                         <div class="skill-level">
                             <div class="skill-name">Programming languages - C, C++, Java, Python</div>
                         </div>
@@ -146,9 +144,7 @@
                         </div>
 
                     </div>
-                </div>
-
-
+                </div>  
             </div>
             <div class="download-cv">
                 <button class="btn">
@@ -279,6 +275,26 @@
                 <div class="nameAndProfession">
                     <h1>Portfolio</h1>
                 </div>
+                <div class="ccs">
+                    <h2>Title - College Counselling</h2>
+                    <p><b>Description</b> - Successfully design and developed a MERN Stack college counselling web application. This web application software that is used to solve counseling problems in colleges. In this software admin/counselor can manage the records and previous chat of students. we can also appoint new counselors, manages, and export the counselor report.</p>
+
+                    <p>
+                        <b>Technology Used</b> - ReactJS, NodeJS, ExpressJS, MongoDB
+                    </p>
+                    <div class="ccsImages swipe">
+                        <img   id="ccsImage"  src="./media/images/ccs/ccs (1).png" alt="ccs 1">
+                        <img   id="ccsImage"  src="./media/images/ccs/ccs (2).png" alt="ccs 1">
+                        <img   id="ccsImage"  src="./media/images/ccs/ccs (3).png" alt="ccs 1">
+                        <img   id="ccsImage"  src="./media/images/ccs/ccs (4).png" alt="ccs 1">
+                        <img   id="ccsImage"  src="./media/images/ccs/ccs (5).png" alt="ccs 1">
+                        <img   id="ccsImage"  src="./media/images/ccs/ccs (6).png" alt="ccs 1">
+                        <img   id="ccsImage"  src="./media/images/ccs/ccs (7).png" alt="ccs 1">
+                    </div> 
+                </div>
+                
+
+                
 
                 <h3 class="projects">My Last Projects</h3>
 
@@ -395,6 +411,22 @@
 
 
     <script src="js/script.js"></script>
+
+    <script> 
+        let counter = 1;
+        const imgElement = document.getElementById("ccsImage");
+    
+        function handleCarosoul() {
+            counter++;
+            if (counter > 7) {
+                counter = 1;
+            } 
+        }
+    
+        // Set interval to change the image every 5 seconds (adjust as needed)
+        setInterval(handleCarosoul, 1000); // Change image every 5000 milliseconds (5 seconds)
+    </script>
+    
 </body>
 
 </html>
