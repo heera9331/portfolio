@@ -19,7 +19,14 @@ trigger.addEventListener("click", () => {
   }
 });
 
-
-
-
-
+let click = 0;
+const handleBg = (e) => {
+  let root = document.querySelector("html");
+  console.log(root);
+  if (click) {
+    root.style.setProperty("--main-color", "#ff7606");
+  } else {
+    root.style.setProperty("--main-color", "#ff4406");
+  }
+  click = click ? 0 : 1;
+};

@@ -2,10 +2,15 @@
   --primary-color: #000814;
   --secondary-color: #111d28;
   --main-color: #ff7606;
+  --text-color: #ffffff;
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+html {
+  color: var(--text-color);
 }
 
 * {
@@ -368,7 +373,13 @@ div.bio-data {
   align-items: center;
   line-height: 2.5rem;
   font-weight: bold;
+  padding: 1rem 1.2rem;
+  border-radius: 3px;
+  background-color: var(--secondary-color);
   /* font-size: 1.5rem; */
+}
+#contact .contact {
+  background-color: red;
 }
 
 #contact .query h2 {
@@ -544,3 +555,20 @@ textarea:focus {
   background-color: var(--secondary-color);
   /* background-color: red; */
 }
+
+/* background change style */
+#bg-btn {
+  /* background-color: red; */
+  position: fixed;
+  right: 0px;
+  color: white;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+#bg-btn span {
+  font-size: 36px;
+  /* background-color: var(--secondary-color); */
+  padding: 10px;
+}
+
