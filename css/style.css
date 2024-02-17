@@ -138,7 +138,7 @@ a#nav-link:hover {
   background-color: var(--main-color);
   padding: 3px;
   border-radius: 50%;
-  /* width: 100%; */
+  width: 80%; 
   /* background-color: red; */
 }
 
