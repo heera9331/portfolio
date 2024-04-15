@@ -508,8 +508,6 @@ input:focus {
     list-style-type: none;
   }
 
-  /* #home .subject img {
-  } */
   .info {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -535,16 +533,16 @@ input:focus {
     display: none;
   }
 
-  #contact .contacts-wrapper {
-    grid-template-columns: repeat(2, 1fr);
-  }
   .ccsImages {
     grid-template-columns: repeat(2, 1fr);
   }
 
   .services-wrapper {
     grid-template-columns: repeat(2, 1fr);
-    border-color: 1px solid red;
+  }
+
+  .contacts-wrapper {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -578,7 +576,7 @@ input:focus {
   #contact .query p,
   #contact .query h2 {
     padding: 1rem 0;
-  } 
+  }
 }
 
 /* for small devices */
