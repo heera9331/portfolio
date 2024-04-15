@@ -222,7 +222,7 @@ div.bio-data {
 }
 
 #education {
-  /* padding: 1.5rem; */ 
+  /* padding: 1.5rem; */
   border-radius: 5px;
   display: grid;
   gap: 20px;
@@ -238,7 +238,6 @@ div.bio-data {
   padding: 1rem;
   background-color: var(--secondary-color);
 }
- 
 
 #education .intermediate {
   padding-left: 4px;
@@ -522,7 +521,7 @@ input:focus {
     padding: 1rem 2rem;
   }
   #services .services-wrapper {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 
   #portfolio .project-wrapper {
@@ -534,6 +533,18 @@ input:focus {
   }
   #menu.menu {
     display: none;
+  }
+
+  #contact .contacts-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .ccsImages {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .services-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    border-color: 1px solid red;
   }
 }
 
@@ -567,9 +578,7 @@ input:focus {
   #contact .query p,
   #contact .query h2 {
     padding: 1rem 0;
-  }
-  .bio-data .contact {
-  }
+  } 
 }
 
 /* for small devices */
@@ -618,4 +627,20 @@ input:focus {
   font-size: 36px;
   /* background-color: var(--secondary-color); */
   padding: 10px;
+}
+
+/* ---------------------Go To Top-------------------- */
+
+#goToTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--main-color);
+  padding: 1rem;
+  border-radius: 3px;
+  font-weight: 600;
+}
+
+#goToTop:hover {
+  cursor: pointer;
 }
