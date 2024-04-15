@@ -1,3 +1,6 @@
+
+/* ---------------------Initiale Style for my every website -------------------- */
+
 :root {
   --primary-color: #000814;
   --secondary-color: #111d28;
@@ -34,6 +37,9 @@ a {
 a:active {
   color: var(--main-color);
 }
+
+
+/* ---------------------Navbar-------------------- */
 
 #navbar {
   padding: 1rem 4rem;
@@ -86,16 +92,21 @@ a#nav-link:hover {
   color: var(--main-color);
 } */
 
+
+/* ---------------------Home Section-------------------- */
+
 #home {
   max-width: 90%;
   margin: auto;
   display: flex;
   align-items: center;
   padding: 5rem 0;
+  /* border: 1px solid red; */
 }
 
 #home .content {
-  display: flex;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
 }
 
 #home .content {
@@ -109,8 +120,8 @@ a#nav-link:hover {
 }
 
 .btn {
-  padding: 6px 8px;
-  font-weight: bold;
+  padding: .6rem 1rem;
+  font-weight: 600;
   border: none;
   border-radius: 2px;
   background-color: var(--main-color);
@@ -123,6 +134,8 @@ a#nav-link:hover {
   opacity: 0.8;
 }
 
+/* ---------------------Hero Section-------------------- */
+
 #home .homeContent p {
   margin: 1rem auto;
 }
@@ -134,14 +147,22 @@ a#nav-link:hover {
   padding: 16px;
 }
 
+.subject div {
+  border: 3px dashed var(--main-color);
+  border-radius: 50%;
+  padding: 5px;
+}
+
 #home .subject img {
   background-color: var(--main-color);
-  padding: 3px;
   border-radius: 50%;
-  width: 80%; 
+  border: 1px solid red;
   /* background-color: red; */
 }
 
+/* ---------------------home end-------------------- */
+
+/* ---------------------About start-------------------- */
 #about {
   padding-top: 5rem;
   max-width: 90%;
@@ -192,6 +213,9 @@ a#nav-link:hover {
   list-style-type: square;
 }
 
+/* ---------------------About end-------------------- */
+
+/* ---------------------Education Start-------------------- */
 div.content,
 div.bio-data {
   height: fit-content;
@@ -236,6 +260,8 @@ div.bio-data {
 #education .high-school {
   margin-top: 3rem;
 }
+/* ---------------------Education End-------------------- */
+/* ---------------------Services Start-------------------- */
 
 #services {
   padding: 6rem 0;
@@ -254,7 +280,7 @@ div.bio-data {
   background-color: var(--secondary-color);
   /* width: 287px; */
   text-align: center;
-  padding: 1rem;
+  padding: 1.5rem;
 
   /* margin: 1rem; */
   /* background-color: red; */
@@ -262,7 +288,7 @@ div.bio-data {
 }
 
 .service-container:hover {
-  scale: 1.1;
+  scale: 1.05;
   transition: all ease-in 200ms;
   transition: all ease-out 200ms;
   border: 1px solid var(--main-color);
@@ -278,6 +304,8 @@ div.bio-data {
   text-align: left;
   padding: 1rem 0;
 }
+
+/* ---------------------Services End-------------------- */
 
 #portfolio {
   max-width: 90%;
@@ -298,11 +326,11 @@ div.bio-data {
 
 .ccsImages {
   margin: 1rem auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
   width: 100%;
   overflow-wrap: normal;
-  display: flex;
-  overflow-x: scroll;
   transition: all ease-in 300ms;
 }
 
@@ -333,7 +361,7 @@ div.bio-data {
   box-shadow: var(--main-color) 3px 3px 10px;
   transition: all ease-in 200ms;
   margin: 0 1rem;
-  scale: 1.1;
+  scale: 1.05;
 }
 
 #portfolio .project-wrapper .project-container img {
@@ -341,30 +369,39 @@ div.bio-data {
   border-radius: 0.5rem;
 }
 
+/* ---------------------Contact Start-------------------- */
+
 #contact {
   max-width: 90%;
   margin: 1rem auto;
   padding: 10rem 0;
 }
 
-#contact .query {
-  text-align: center;
-  height: 10rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  line-height: 3rem;
-}
-
 #contact .query p {
   font-weight: bold;
 }
 
-#contact .contacts-wrapper {
+.contactForm {
+  padding: 30px;
+  /* border: 1px solid red; */
   display: flex;
-  justify-content: space-around;
-  margin: 3rem auto;
-  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  background-color: var(--secondary-color);
+  border-radius: 10px;
+}
+
+.contactForm p {
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+#contact .contacts-wrapper {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+  padding: 2rem 0;
 }
 
 #contact .contacts-wrapper .contact {
@@ -373,22 +410,14 @@ div.bio-data {
   align-items: center;
   line-height: 2.5rem;
   font-weight: bold;
-  padding: 1rem 1.2rem;
+  padding: 3rem;
   border-radius: 3px;
   background-color: var(--secondary-color);
   /* font-size: 1.5rem; */
 }
-#contact .contact {
-  background-color: red;
-}
 
 #contact .query h2 {
-  font-size: 2.8rem;
   color: var(--main-color);
-}
-
-#contact .query p {
-  font-size: 1.8rem;
 }
 
 #contact .contacts-wrapper .contact span {
@@ -399,8 +428,7 @@ div.bio-data {
 
 #contact .mail-contact .nameAndMail {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  gap: 10px;
 }
 
 #contact .mail-contact .nameAndMail input,
@@ -409,8 +437,8 @@ textarea {
   width: 50%;
   border-radius: 0.3rem;
   border: none;
-  margin: 10px;
-  background-color: var(--secondary-color);
+  background-color: var(--primary-color);
+  color: white;
 }
 
 #contact .mail-contact .nameAndMail,
@@ -424,16 +452,33 @@ textarea {
 }
 
 #contact .btn {
-  margin-left: 10px;
   border-radius: 0.2rem;
+  margin-left: 10px;
 }
 
-input:focus,
-textarea:focus {
-  outline-color: var(--main-color);
-  color: white;
-  font-size: medium;
+.mapAndForm {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 16px 0;
+  gap: 10px;
 }
+
+.googleMap {
+  width: 100%;
+  height: 100%;
+}
+
+.googleMap {
+  border-radius: 10px;
+}
+
+textarea:focus,
+input:focus {
+  outline: none;
+  color: white;
+}
+
+/* ---------------------Contact End-------------------- */
 
 /* responsive */
 
@@ -529,7 +574,6 @@ textarea:focus {
     padding: 1rem 0;
   }
   .bio-data .contact {
-    background-color: red;
   }
 }
 
