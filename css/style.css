@@ -153,7 +153,6 @@ a#nav-link:hover {
 #home .subject img {
   background-color: var(--main-color);
   border-radius: 50%;
-  border: 1px solid red;
   /* background-color: red; */
 }
 
@@ -223,8 +222,10 @@ div.bio-data {
 }
 
 #education {
-  /* padding: 1.5rem; */
+  /* padding: 1.5rem; */ 
   border-radius: 5px;
+  display: grid;
+  gap: 20px;
 }
 
 #education .edu-desc {
@@ -237,9 +238,9 @@ div.bio-data {
   padding: 1rem;
   background-color: var(--secondary-color);
 }
+ 
 
 #education .intermediate {
-  margin-top: 3rem;
   padding-left: 4px;
   border-left: 3px solid var(--main-color);
   padding: 1rem;
@@ -247,16 +248,12 @@ div.bio-data {
 }
 
 #education .high-school {
-  margin-top: 3rem;
   padding-left: 4px;
   border-left: 3px solid var(--main-color);
   padding: 1rem;
   background-color: var(--secondary-color);
 }
 
-#education .high-school {
-  margin-top: 3rem;
-}
 /* ---------------------Education End-------------------- */
 /* ---------------------Services Start-------------------- */
 
