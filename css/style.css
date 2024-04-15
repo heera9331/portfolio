@@ -1,4 +1,3 @@
-
 /* ---------------------Initiale Style for my every website -------------------- */
 
 :root {
@@ -29,7 +28,7 @@ body {
 }
 
 a {
-  /* text-decoration: none; */
+  text-decoration: none;
   color: white;
   font-weight: bold;
 }
@@ -37,7 +36,6 @@ a {
 a:active {
   color: var(--main-color);
 }
-
 
 /* ---------------------Navbar-------------------- */
 
@@ -92,7 +90,6 @@ a#nav-link:hover {
   color: var(--main-color);
 } */
 
-
 /* ---------------------Home Section-------------------- */
 
 #home {
@@ -120,7 +117,7 @@ a#nav-link:hover {
 }
 
 .btn {
-  padding: .6rem 1rem;
+  padding: 0.6rem 1rem;
   font-weight: 600;
   border: none;
   border-radius: 2px;
@@ -466,6 +463,7 @@ textarea {
 .googleMap {
   width: 100%;
   height: 100%;
+  min-height: 400px;
 }
 
 .googleMap {
@@ -577,9 +575,18 @@ input:focus {
   }
 }
 
+/* for small devices */
+
 @media screen and (max-width: 450px) {
   .mail-contact {
     margin-top: 2rem;
+  }
+  .ccsImages {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .mapAndForm {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 
