@@ -30,3 +30,36 @@ const handleBg = (e) => {
   }
   click = click ? 0 : 1;
 };
+
+let switcher = document.querySelector(".bgBtnWrapper span.bgBtn");
+let colorPickerWrapper = document.querySelector(".hidden"); 
+ 
+let rootElement = document.querySelector(":root");
+console.log(rootElement);
+var rootElementStyle = getComputedStyle(rootElement);
+
+
+switcher.addEventListener('click', (e)=>{  
+  // rootElement.style.setProperty("--main-color","#003003");
+  console.log(colorPickerWrapper);
+  colorPickerWrapper.classList.toggle("hidden"); 
+})
+
+function handleColorChange(e) {
+  let colorValue = e.value;
+  if(colorValue == "red") {
+    rootElement.style.setProperty("--main-color", "red");
+  }
+  else if (colorValue == "green") { 
+    rootElement.style.setProperty("--main-color", "#4afb53");
+  } 
+  else if (colorValue == "pink") {
+    rootElement.style.setProperty("--main-color", "#db2777");
+  } else if (colorValue == "purple") {
+    
+    rootElement.style.setProperty("--main-color", "#3f51b5");
+  }
+  else {
+    rootElement.style.setProperty("--main-color", "#ff7606");
+  }
+}

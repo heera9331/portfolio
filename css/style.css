@@ -33,8 +33,34 @@ a {
   font-weight: bold;
 }
 
+/* utility classes */
+
+.hidden1 {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
 a:active {
   color: var(--main-color);
+}
+
+/* background switcher */
+
+div.bgBtnWrapper {
+  position: absolute;
+  right: 0px;
+}
+
+div.bgBtnWrapper span.bgBtn {
+  font-size: 40px;
+  padding: 5px;
+}
+
+span.bgBtn:hover {
+  color: red;
 }
 
 /* ---------------------Navbar-------------------- */

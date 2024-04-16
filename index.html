@@ -9,6 +9,7 @@
     
     With a creative mindset and strong problem-solving skills, I strive to contribute my skills and enthusiasm to challenging projects." />
     <title>Heera's Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="css/style.css" />
     <link
       rel="stylesheet"
@@ -20,6 +21,8 @@
       href="./media/images/heera3.png"
       type="image/x-icon"
     />
+
+     
   </head>
 
   <body>
@@ -66,6 +69,40 @@
       </div>
     </div>
 
+    <div class="bgBtnWrapper"> 
+      <span class="material-symbols-outlined bgBtn">
+        brightness_6
+        </span> 
+    </div>
+    <div class="hidden absolute right-0 top-[150px] bg-white text-black flex flex-col gap-2 p-2 m-2">
+      <button value="red" onclick="handleColorChange(this);">
+        <span class="material-symbols-outlined text-red-600">
+          circle
+          </span>
+        </button>
+      <button value="pink" onclick="handleColorChange(this);">
+        <span class="material-symbols-outlined text-pink-600">
+          circle
+          </span>
+      </button>
+      <button value="green" onclick="handleColorChange(this);">
+        <span class="material-symbols-outlined text-green-600">
+          circle
+          </span>
+      </button>
+      <button value="purple" onclick="handleColorChange(this);">
+        <span class="material-symbols-outlined text-purple-600">
+          circle
+          </span>
+      </button>
+       
+      <button value="reset" onclick="handleColorChange(this);">
+        <span class="material-symbols-outlined">
+          reset_wrench
+          </span>
+      </button>
+    </div>
+     
     <!-- <aside id="bg-btn" style="position: fixed">
       <div onmouseover="handleBg(this)">
         <span class="material-symbols-outlined"> settings_brightness </span>
@@ -80,8 +117,8 @@
       <div class="content">
         <div class="homeContent">
           <div class="nameAndProfession">
-            <h1>Hello, my name is <span class="name">Heera Singh</span></h1>
-            <h1>I'm a <span class="profession">Web Developer</span></h1>
+            <h1 class="text-[2.8rem] font-semibold">Hello, my name is <span class="name">Heera Singh</span></h1>
+            <h1 class="text-[2.8rem] font-semibold">I'm a <span class="profession">Web Developer</span></h1>
           </div>
           <p>
             I am Heera Singh Lodhi, a passionate and dedicated fresher with a
@@ -109,8 +146,8 @@
       <div class="content">
         <div class="aboutContent">
           <div class="nameAndProfession">
-            <h1>About Me</h1>
-            <h2>
+            <h1 class="text-[2.8rem] font-semibold">About Me</h1>
+            <h2 class="text-[2.5rem] font-semibold">
               I'm a Heera Singh, <span class="profession"> Web Developer</span>
             </h2>
           </div>
@@ -194,7 +231,7 @@
         </div>
 
         <div id="academics">
-          <h2>Education</h2>
+          <h2 class="text-[2.8rem] font-semibold">Education</h2>
 
           <div id="education">
             <div class="graduation">
@@ -252,14 +289,14 @@
       <div class="content">
         <div class="servicesContent">
           <div class="nameAndProfession">
-            <h1>Services</h1>
+            <h1 class="text-[2.8rem] font-semibold">Services</h1>
           </div>
         </div>
 
         <div class="services-wrapper">
           <div class="service-container">
             <span class="material-symbols-outlined"> computer </span>
-            <h3>Web Design</h3>
+            <h3 class="text-2xl">Web Design</h3>
             <p>
               I am proficient in web design, utilizing HTML, CSS, and JavaScript
               to create visually stunning and responsive websites that
@@ -268,7 +305,7 @@
           </div>
           <div class="service-container">
             <span class="material-symbols-outlined"> computer </span>
-            <h3>Frontend Developement</h3>
+            <h3 class="text-2xl">Frontend Developement</h3>
             <p>
               As a frontend developer, I excel in translating design concepts
               into functional and dynamic web interfaces using HTML, CSS, and
@@ -277,7 +314,7 @@
           </div>
           <div class="service-container">
             <span class="material-symbols-outlined"> code </span>
-            <h3>Backend Developement</h3>
+            <h3 class="text-2xl">Backend Developement</h3>
             <p>
               With expertise in backend development, I specialize in building
               robust and scalable web applications using server-side
@@ -286,7 +323,7 @@
           </div>
           <div class="service-container">
             <span class="material-symbols-outlined"> computer </span>
-            <h3>Freelance</h3>
+            <h3 class="text-2xl">Freelance</h3>
             <p>
               As a freelance professional, I offer my expertise in web design
               and development to deliver customized and high-quality solutions
@@ -297,7 +334,7 @@
             <span class="material-symbols-outlined">
               dashboard
               </span>
-            <h3>UI/UX</h3>
+            <h3 class="text-2xl">UI/UX</h3>
             <p>
               As a freelance professional, I offer my expertise in web design
               and development to deliver customized and high-quality solutions
@@ -312,7 +349,7 @@
       <div class="content">
         <div class="portfolioContent">
           <div class="nameAndProfession">
-            <h1>Portfolio</h1>
+            <h1 class="text-[2.8rem] font-semibold">Portfolio</h1>
           </div>
           <div class="ccs">
             <h2>Title - College Counselling</h2>
@@ -365,7 +402,7 @@
             </div>
           </div>
 
-          <h3 class="projects">My Last Projects</h3>
+          <h3 class="projects text-2xl">My Last Projects</h3>
 
           <div class="project-wrapper">
             <div class="project-container">
@@ -395,13 +432,13 @@
     <div id="contact">
       <div class="contactHeading">
         <div class="nameAndProfession">
-          <h1>Contact</h1>
+          <h1 class="text-[2.8rem] font-semibold">Contact</h1>
         </div>
       </div>
 
       <div class="query">
-        <h2>Have you Any Questions?</h2>
-        <p>I'M AT YOUR SERVICE</p>
+        <h2 class="text-2xl font-semibold">Have you Any Questions?</h2>
+        <p class="text-2xl font-semibold">I'M AT YOUR SERVICE</p>
       </div>
 
       <div class="contacts-wrapper">
@@ -433,14 +470,14 @@
       </div>
 
       <div class="query">
-        <h2>Send Me An Email</h2>
+        <h2 class="text-2xl font-semibold">Send Me An Email</h2>
         
       </div>
 
       <div class="mapAndForm">
         <div class="mail-contact">
           <form action="#" class="contactForm">
-            <p>I'M VERY RESPONSIVE TO MESSAGES</p>
+            <p class="text-2xl font-semibold">I'M VERY RESPONSIVE TO MESSAGES</p>
             <div class="nameAndMail">
               <input type="text" name="name" id="name" placeholder="Name" />
               <input type="email" name="email" id="email" placeholder="Email" />
@@ -462,6 +499,7 @@
                 cols="30"
                 rows="10"
                 placeholder="Message"
+                class="p-4"
               ></textarea>
             </div>
     
