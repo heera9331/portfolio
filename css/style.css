@@ -497,6 +497,9 @@ input:focus {
 /* responsive navbar */
 
 @media only screen and (max-width: 850px) {
+  .subject {
+    margin-top: 100px;
+  }
   #about .info {
     margin: 2rem auto;
     display: grid;
