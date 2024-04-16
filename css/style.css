@@ -495,7 +495,7 @@ input:focus {
 }
 
 /* responsive navbar */
- 
+
 @media only screen and (max-width: 850px) {
   #about .info {
     margin: 2rem auto;
@@ -541,9 +541,12 @@ input:focus {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  #contact .contacts-wrapper  {
+  #contact .contacts-wrapper {
     grid-template-columns: repeat(2, 1fr) !important;
-     
+  }
+
+  .wrapper {
+    list-style-type: none;
   }
 }
 
