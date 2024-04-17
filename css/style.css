@@ -50,8 +50,9 @@ a:active {
 /* background switcher */
 
 div.bgBtnWrapper {
-  position: absolute;
-  right: 0px;
+  position: fixed;
+  right: 5px;
+  top: 150px;
 }
 
 div.bgBtnWrapper span.bgBtn {
@@ -677,4 +678,8 @@ input:focus {
 
 #goToTop:hover {
   cursor: pointer;
+}
+
+::selection {
+  background-color: var(--main-color);
 }
