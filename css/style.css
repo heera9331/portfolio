@@ -25,6 +25,10 @@ html {
 body {
   background-color: var(--primary-color);
   color: white;
+  cursor: url('../media/icons/icons8-cursor\(3\).svg'), auto;
+  fill: red;
+  
+  cursor: white;
 }
 
 a {
@@ -67,7 +71,7 @@ span.bgBtn:hover {
 /* ---------------------Navbar-------------------- */
 
 #navbar {
-  padding: 1rem 4rem;
+  padding: .2rem 4rem;
   background-color: var(--secondary-color);
   display: flex;
   justify-content: space-between;
@@ -682,4 +686,19 @@ input:focus {
 
 ::selection {
   background-color: var(--main-color);
+}
+
+
+/* cursor style */
+
+#circleCursor {
+  width: 80px; /* Diameter of the circle */
+  height: 80px;
+  /* background-color: var(--main-color); Color of the circle */
+  border-radius: 50%; /* Ensures it's a circle */
+  position: absolute;
+  pointer-events: none; /* Allows interaction with elements beneath */
+  z-index: 9999; /* Ensures it's above other elements */
+  transform: translate(-50%, -50%); /* Center the circle around the cursor */
+  border: 2px solid var(--main-color);
 }

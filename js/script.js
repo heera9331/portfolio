@@ -63,3 +63,12 @@ function handleColorChange(e) {
     rootElement.style.setProperty("--main-color", "#ff7606");
   }
 }
+
+
+// cursor functionality
+
+document.addEventListener('mousemove', function(e) {
+  var circleCursor = document.getElementById('circleCursor');
+  circleCursor.style.left = e.pageX + 'px';
+  circleCursor.style.top = e.pageY + 'px';
+});
