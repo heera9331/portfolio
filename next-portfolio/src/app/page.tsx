@@ -9,7 +9,7 @@ export default function Home() {
             Hello, my name is Heera Singh
           </h1>
           <h2 className="text-2xl font-semibold uppercase">
-            I'm a Software Developer
+            Iam a Software Developer
           </h2>
           <div className="text-[18px] flex flex-col gap-4 justify-around my-4">
             <p className="">
