@@ -8,26 +8,24 @@
 }
 
 html {
-  scroll-behavior: smooth;
-}
-
-html {
   color: var(--text-color);
+  font-size: 18px;
+  letter-spacing: 0px;
+  scroll-behavior: smooth;
 }
 
 * {
   padding: 0;
   margin: 0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: sans-serif;
 }
 
 body {
   background-color: var(--primary-color);
   color: white;
-  cursor: url('../media/icons/icons8-cursor\(3\).svg'), auto;
+  cursor: url("../media/icons/icons8-cursor\(3\).svg"), auto;
   fill: red;
-  
+
   cursor: white;
 }
 
@@ -68,11 +66,17 @@ span.bgBtn:hover {
   color: red;
 }
 
+ul,
+ol {
+  list-style-type: none;
+}
+
 /* ---------------------Navbar-------------------- */
 
 #navbar {
-  padding: .2rem 4rem;
-  background-color: var(--secondary-color);
+  padding: 0.1rem 4rem;
+  border-bottom: 0.5px solid var(--main-color);
+  backdrop-filter: blur(10px);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -91,6 +95,7 @@ span.bgBtn:hover {
 
 #navbar .link-wrapper {
   padding: 5px;
+  text-transform: uppercase;
   /* background-color: red; */
 }
 .link-container a {
@@ -100,20 +105,25 @@ span.bgBtn:hover {
 
 .link-container:hover {
   color: var(--main-color);
+  border: 1px solid var(--main-color);
 }
+
 .link-wrapper:hover {
   background-color: var(--primary-color);
   border-bottom: 2px solid var(--main-color);
 }
+
 .link-container {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 4px;
 }
 
 #navbar .link-container span,
 a {
-  padding: 3px;
+  padding: 1px;
+  cursor: pointer;
 }
 
 /* div.link-wrapper:hover,
@@ -128,7 +138,6 @@ a#nav-link:hover {
   margin: auto;
   display: flex;
   align-items: center;
-  padding: 5rem 0;
   /* border: 1px solid red; */
 }
 
@@ -191,9 +200,8 @@ a#nav-link:hover {
 
 /* ---------------------About start-------------------- */
 #about {
-  padding-top: 5rem;
   max-width: 90%;
-  margin: 1rem auto;
+  margin: 0 auto;
   display: flex;
   align-items: center;
 }
@@ -288,7 +296,7 @@ div.bio-data {
 /* ---------------------Services Start-------------------- */
 
 #services {
-  padding: 6rem 0;
+  padding: 0;
   max-width: 90%;
   margin: auto;
 }
@@ -308,7 +316,9 @@ div.bio-data {
 
   /* margin: 1rem; */
   /* background-color: red; */
-  border-radius: 3px;
+  border-radius: 10px;
+  border: 0.5px solid rgba(255, 255, 255, 0.34);
+  z-index: -1;
 }
 
 .service-container:hover {
@@ -377,7 +387,7 @@ div.bio-data {
 #portfolio .project-wrapper .project-container {
   /* background-color: var(--main-color); */
   border-radius: 5px;
-
+z-index: -1;
   /* padding: 5px; */
 }
 
@@ -398,7 +408,7 @@ div.bio-data {
 #contact {
   max-width: 90%;
   margin: 1rem auto;
-  padding: 10rem 0;
+  padding: 3rem 0;
 }
 
 #contact .query p {
@@ -429,15 +439,17 @@ div.bio-data {
 }
 
 #contact .contacts-wrapper .contact {
-  display: flex;
+  display: grid;
   flex-direction: column;
   align-items: center;
+  text-align: center;
   line-height: 2.5rem;
   font-weight: bold;
   padding: 3rem;
-  border-radius: 3px;
+  border-radius: 10px;
   background-color: var(--secondary-color);
   /* font-size: 1.5rem; */
+  border: 0.5px solid rgba(255, 255, 255, 0.34);
 }
 
 #contact .query h2 {
@@ -513,7 +525,7 @@ input:focus {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-top: 3px solid var(--main-color);
+  border-top: 0.5px solid var(--main-color);
 }
 
 .footer p {
@@ -688,17 +700,16 @@ input:focus {
   background-color: var(--main-color);
 }
 
-
 /* cursor style */
-
+/*
 #circleCursor {
   width: 80px; /* Diameter of the circle */
-  height: 80px;
-  /* background-color: var(--main-color); Color of the circle */
-  border-radius: 50%; /* Ensures it's a circle */
-  position: absolute;
-  pointer-events: none; /* Allows interaction with elements beneath */
-  z-index: 9999; /* Ensures it's above other elements */
-  transform: translate(-50%, -50%); /* Center the circle around the cursor */
-  border: 2px solid var(--main-color);
-}
+/* height: 80px; */
+/* background-color: var(--main-color); Color of the circle */
+/* border-radius: 50%; Ensures it's a circle */
+/* position: absolute; */
+/* pointer-events: none; Allows interaction with elements beneath */
+/* z-index: 9999; Ensures it's above other elements */
+/* transform: translate(-50%, -50%); Center the circle around the cursor */
+/* border: 2px solid var(--main-color); */
+/* } */

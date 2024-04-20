@@ -67,8 +67,8 @@ function handleColorChange(e) {
 
 // cursor functionality
 
-document.addEventListener('mousemove', function(e) {
-  var circleCursor = document.getElementById('circleCursor');
-  circleCursor.style.left = e.pageX + 'px';
-  circleCursor.style.top = e.pageY + 'px';
-});
+// document.addEventListener('mousemove', function(e) {
+//   var circleCursor = document.getElementById('circleCursor');
+//   circleCursor.style.left = e.pageX + 'px';
+//   circleCursor.style.top = e.pageY + 'px';
+// });
