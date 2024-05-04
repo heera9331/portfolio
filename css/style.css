@@ -654,6 +654,15 @@ input:focus {
   html {
     font-size: 16px;
   }
+
+  h2 {
+    font-size: 32px;
+  }
+
+  h3 {
+    font-size: 28px;
+  }
+
   .nameAndProfession h1 {
     font-size: 28px;
   }
